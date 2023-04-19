@@ -14,37 +14,39 @@ In this python file, I've used a Fitness Function to optimize the parameters.
 ## Dataset
 
 The dataset for the project has been downloaded from the UCI Machine Learning Repository.
-[https://archive.ics.uci.edu/ml/datasets/Dry+Bean+Dataset](https://archive.ics.uci.edu/ml/datasets/Dry+Bean+Dataset)
+[https://archive.ics.uci.edu/ml/datasets/Crowdsourced+Mapping](https://archive.ics.uci.edu/ml/datasets/Crowdsourced+Mapping)
 
-Seven different types of dry beans were used in this research, taking into account the features such as form, shape, type, and structure by the market situation. A computer vision system was developed to distinguish seven different registered varieties of dry beans with similar features in order to obtain uniform seed classification. For the classification model, images of 13,611 grains of 7 different registered dry beans were taken with a high-resolution camera. Bean images obtained by computer vision system were subjected to segmentation and feature extraction stages, and a total of 16 features; 12 dimensions and 4 shape forms, were obtained from the grains.
+This dataset was derived from geospatial data from two sources: 1) Landsat time-series satellite imagery from the years 2014-2015, and 2) crowdsourced georeferenced polygons with land cover labels obtained from OpenStreetMap. The crowdsourced polygons cover only a small part of the image area, and are used used to extract training data from the image for classifying the rest of the image. The main challenge with the dataset is that both the imagery and the crowdsourced data contain noise (due to cloud cover in the images and innaccurate labeling/digitizing of polygons).
 
 
-Number of Instances: 13611
+Number of Instances: 10546
 
-Number of Attributes: 17
+
+Number of Attributes: 29
 
 ## Final Result Table
 
 | Sample  | Best Accuracy | Best Kernel | Best Nu | Best Epsilon |
 | -----   | ------------- | ----------- | ------- | ------------ |
-| 1	| 0.30	| poly	  | 8.54	| 5.85 |
-| 2	| 0.61	| linear	| 6.57	| 6.46 |
-| 3	| 0.50	| poly	  | 4.53	| 2.14 |
-| 4	| 0.53	| linear	| 7.54	| 6.45 |
-| 5	| 0.29	| linear	| 1.96	| 1.63 |
-|	6	| 0.46	| poly	  | 4.51	| 6.15 |
-| 7	| 0.47	| poly	  | 0.17	| 5.41 |
-|	8	| 0.39	| poly	  | 9.84	| 5.97 |
-|	9	| 0.64	| poly	  | 7.24	| 9.23 |
-|	10| 0.40	| poly	  | 5.05	| 3.99 |
+| 1	| 0.86	| poly	  | 8.88	| 4.48 |
+| 2	| 0.90	| poly	  | 4.25	| 4.11 |
+| 3	| 0.91	| poly	  | 1.57	| 1.61 |
+| 4	| 0.88	| poly	  | 8.37	| 0.49 |
+| 5	| 0.84	| poly	  | 8.51	| 7.11 |
+|	6	| 0.90	| poly	  | 1.66	| 2.77 |
+| 7	| 0.87	| poly	  | 2.26	| 0.59 |
+|	8	| 0.92	| poly	  | 1.35	| 3.35 |
+|	9	| 0.89	| poly	  | 4.25	| 6.68 |
+|	10| 0.80	| poly	  | 5.61	| 7.79 |
 
 ## Convergence Graph
-![Graph](https://user-images.githubusercontent.com/73169853/233138068-d4821a97-a21b-485c-8459-2172570d2cc0.png)
+![Graph](https://user-images.githubusercontent.com/73169853/233152734-12f8f0b2-fdd8-4ced-9d5c-d04362dce208.png)
+
 
 ## Discussion
 From the above graph, we can conclude that the model is well trained and parameter have been optimized due to the less gap between training and cross-validation curve.
 
-The graph is made for the sample which has best accuracy. Sample 9 has the best accuracy of 0.64 having kernel = Poly, Nu = 7.24 and Epsilon = 9.23.
+The graph is made for the sample which has best accuracy. Sample 8 has the best accuracy of 0.92 having kernel = Poly, Nu = 1.35 and Epsilon = 3.35.
 
 ## Written By
 Name : Raunak Kumar
